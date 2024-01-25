@@ -4,13 +4,11 @@ A new Flutter project.
 
 ## Getting Started
 
-This project is a starting point for a Flutter application.
+In this example:
 
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+- We create a Flutter app with a simple MyHomePage widget.
+- Inside the widget's state, we use Isolate.spawn to start a new isolate running the _isolateEntryPoint function.
+- The _isolateEntryPoint function runs in a separate isolate and sends counter values to the main isolate using the sendPort.
+- The main isolate listens to the ReceivePort for messages from the spawned isolate and updates the UI with the received counter value.
+- We use a Timer in the spawned isolate to simulate some background task.
+- This example demonstrates the basic usage of Flutter isolates to perform concurrent tasks in a separate isolate and update the UI accordingly.
