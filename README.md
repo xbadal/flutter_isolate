@@ -1,6 +1,6 @@
 # flutter_isolate
 
-A new Flutter project.
+A new Flutter Isolate Example.
 
 ## Getting Started
 
